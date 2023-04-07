@@ -1,0 +1,57 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferramenta</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+<body>
+    <div>
+        <canvas id="myChart"></canvas>
+      </div> 
+
+</body>
+
+<script>
+    const ctx = document.getElementById('myChart');
+  
+    new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+        datasets: [{
+          label: '# Temperatura média',
+          backgroundColor: 'rgb(232, 9, 132)',
+          borderColor: 'rgb(47, 109, 122)',
+          data: [12, 19, 3, 5, 2, 3],
+          borderWidth: 1
+
+          
+        },
+
+       {
+        label: '# Umidade média',
+        backgroundColor: 'rgb(18, 170, 204)',
+          borderColor: 'rgb(47, 109, 122)',
+          data: [90, 89, 93, 87, 88, 82],
+          borderWidth: 1
+          
+       }
+    ], 
+
+      },
+      options: {
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</html>
+
